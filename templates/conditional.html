@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: red;">if condition</h1>
+        {% if a < b %}
+            <h2> a < b condition True</h2>    
+            <h2>a value  {{a}}</h2>
+        {% endif %}
+    </center>
+
+    <center>
+
+
+        <h1 style="color:red">if else condition</h1>
+        {% if a > b %}
+            <h2> a > b condition True</h2>
+            <h2> a is max  {{a}}</h2>
+        {% else %}
+           <h2> a > b condition False</h2>
+           <h2>b is max  {{b}}</h2>
+        {% endif %}
+
+    </center>
+
+    <center>
+        <h1 style="color: red;">if elif else condition</h1>
+        {% if a > b  and a > c %}
+            <h2>a > b and a > b condition True</h2>
+            <h2>a is max  {{a}}</h2>
+        {% elif b > c %}
+            <h2>b > c condition True</h2>
+            <h2>b is max  {{b}}</h2>
+        {% else %}
+            <h2>if and elif condition False</h2>
+            <h2>c is max  {{c}}</h2>
+        {% endif %}
+
+    </center>
+
+    <center>
+        <h1 style=" color:red">nested condition</h1>
+        {% if a > b %}
+            {% if a > c %}
+               <h2>a > b and a > c condition True</h2>
+               <h2>a is max  {{a}}</h2>
+            {% else %}
+               <h2>a > c condition False</h2>
+               <h2>c is max  {{c}}</h2>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+               <h2>b > c condition True</h2>
+               <h2>b is max  {{b}}</h2>
+            {% else %}
+               <h2>b > c condition False</h2>
+               <h2>c is max  {{c}}</h2>
+            {% endif %}
+        {% endif %}
+    </center>
+    
+</body>
+</html>
